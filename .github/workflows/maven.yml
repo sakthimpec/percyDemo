@@ -36,7 +36,7 @@ jobs:
     - name: Export token
       run: export PERCY_TOKEN=dcb61d9bd49f0c5d60867b0946cccdfe507e23142f762302c51cdaf0e473c122
     - name: Build with Maven
-      run: npx percy app:exec -- mvn compile exec:java -Dexec.mainClass="io.percy.appiumpercy.Android"
+      run: percy exec -- mvn compile exec:java -Dexec.mainClass="io.percy.appiumpercy.Android"
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

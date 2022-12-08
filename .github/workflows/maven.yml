@@ -29,8 +29,6 @@ jobs:
         cache: maven
     - name: npm install
       run: npm install --save-dev @percy/cli
-    - name: percy token export
-      run: export PERCY_TOKEN=dcb61d9bd49f0c5d60867b0946cccdfe507e23142f762302c51cdaf0e473c122
     - name: Build with Maven
       run: npx percy app:exec -- mvn compile exec:java -Dexec.mainClass="io.percy.appiumpercy.Android"
 

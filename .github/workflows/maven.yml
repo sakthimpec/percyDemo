@@ -27,6 +27,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: npm install
+      run: npm install --save-dev @percy/cli
     - name: Build with Maven
       run: npx percy app:exec -- mvn compile exec:java -Dexec.mainClass="io.percy.appiumpercy.Android"
 

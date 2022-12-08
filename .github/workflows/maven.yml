@@ -27,6 +27,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Bash install step part one
+      run: sudo apt update
+    - name: Bash install step part two
+      run: sudo apt install bash
     - name: Export token
       run: export PERCY_TOKEN=dcb61d9bd49f0c5d60867b0946cccdfe507e23142f762302c51cdaf0e473c122
     - name: npm install
